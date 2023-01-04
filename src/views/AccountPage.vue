@@ -1,10 +1,10 @@
 <template>
-  <h1>My Books</h1>
+<h1>Account</h1>
 </template>
 
 <script>
 export default {
-  name: "BookView"
+  name: "AccountPage"
 }
 </script>
 

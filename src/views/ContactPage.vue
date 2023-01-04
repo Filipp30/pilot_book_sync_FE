@@ -1,13 +1,13 @@
 <template>
-<h1>Account</h1>
+  <h1>Contact</h1>
 </template>
 
 <script>
 export default {
-  name: "AccountView"
+  name: "ContactPage"
 }
 </script>
 
-<style lang="scss" scoped>
+<style scoped>
 
 </style>

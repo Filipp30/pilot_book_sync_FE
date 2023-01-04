@@ -24,10 +24,9 @@
   <footer class="phone" v-bind:class="{active:nav_active}" >
     <nav class="phone__navi" v-on:click="nav_active = !nav_active">
       <RouterLink to="/" exact>Home</RouterLink>
-      <RouterLink to="/shop" exact>Shop</RouterLink>
-      <RouterLink to="/forum" exact>Forum</RouterLink>
+      <RouterLink to="/books" exact>My Books</RouterLink>
+      <RouterLink to="/account" exact>My Account</RouterLink>
       <RouterLink to="/contact" exact>Contact</RouterLink>
-      <RouterLink to="/my_account" exact>My Account</RouterLink>
       <RouterLink to="/admin" exact>Admin</RouterLink>
     </nav>
   </footer>
@@ -51,10 +50,10 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-  //@import url('https://fonts.googleapis.com/css2?family=New+Tegomin&display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=New+Tegomin&display=swap');
   @import "../assets/styles/navi";
   .navi{
-    height: 6vh;
+    height: 8vh;
     transition: 1s;
     margin: auto;
     padding-top: 10px;
