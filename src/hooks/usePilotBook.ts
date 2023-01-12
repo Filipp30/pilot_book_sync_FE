@@ -2,24 +2,20 @@ import {ref} from "vue";
 import axios from "axios";
 import type PilotBookRow from "@/types/PilotBookRow";
 import ApiEndpoints from "@/enums/ApiEndpoints";
+import {useStore} from "vuex";
 
 export function usePilotBook() {
+    const store = useStore();
+
     const data = ref<PilotBookRow[]>([]);
     const isLoading = ref(false);
+    const bookTypeActive = ref<string|null>(null);
 
     const request = async (type: string): Promise<void> => {
-        const config = {
-            headers: {
-                Authorization: 'Bearer 1|VKmLX3BG2O1ZUtoxdocVKo3jXf11nM7xvbFoIjep',
-                Accept: 'application/json'
-            }
-        }
-
         isLoading.value = true;
 
-        await axios.get(ApiEndpoints.GET_ULM_BOOK, config)
+        await axios.get(ApiEndpoints.GET_ULM_BOOK, store.getters.getApiHeader)
         .then((response) => {
-
             data.value = response.data.data.map((row: any): PilotBookRow => {
                 return {
                     id: row.id,
@@ -35,13 +31,14 @@ export function usePilotBook() {
                 }
             })
 
+            bookTypeActive.value = type;
+
         }).catch((error) => {
-            console.log('error')
             console.log(error)
         }).finally(() => {
             isLoading.value = false
         })
     }
 
-    return {data, isLoading, request}
+    return {data, isLoading, bookTypeActive, request}
 }
