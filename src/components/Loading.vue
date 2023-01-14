@@ -2,7 +2,7 @@
   <div class="spinner-border" role="status"></div>
 </template>
 
-<script>
+<script lang="ts">
 export default {
   name: "Loading"
 }
