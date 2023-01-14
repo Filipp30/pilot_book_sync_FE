@@ -41,7 +41,7 @@
 <script lang="ts">
 import {usePilotBookAdd} from "@/hooks/usePilotBookAdd";
 import {defineComponent, ref} from "vue";
-import Loading from "@/components/Loading.vue";
+import Loading from "@/components/all/Loading.vue";
 
 export default defineComponent({
   name: "PilotBookUpload",

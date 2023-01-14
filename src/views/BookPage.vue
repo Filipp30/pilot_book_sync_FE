@@ -11,7 +11,7 @@
       <Loading/>
     </div>
 
-    <PilotBookListView
+    <PilotBookNavigation
         :book="data"
         :type="bookTypeActive"
         v-if="bookTypeActive != null"
@@ -21,16 +21,15 @@
 </template>
 
 <script lang="ts">
-import PilotBookComponent from "@/components/book/PilotBookOverview.vue";
 import {usePilotBook} from "@/hooks/usePilotBook";
-import PilotBookListView from "@/components/book/PilotBookOverview.vue";
 import PilotBookCard from "@/components/book/PilotBookCard.vue";
-import Loading from "@/components/Loading.vue";
+import Loading from "@/components/all/Loading.vue";
 import {defineComponent} from "vue";
+import PilotBookNavigation from "@/components/book/PilotBookNavigation.vue";
 
 export default defineComponent({
   name: "BookPage",
-  components: {Loading, PilotBookCard, PilotBookListView, PilotBookComponent},
+  components: {PilotBookNavigation, Loading, PilotBookCard},
 
   setup() {
     const {data, isLoading, bookTypeActive, request} = usePilotBook()

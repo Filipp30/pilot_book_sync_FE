@@ -23,7 +23,7 @@
       <div v-if="row.errors.length > 0">
         <p v-for="error in row.errors">
           <img class="icon" v-bind:src="Icons.CIRCLE_EXCLAMATION_SOLID" alt="circle-exclamation-solid">
-          {{error.message}}
+          {{error}}
         </p>
 
       </div>
@@ -36,7 +36,7 @@
 <script lang="ts">
 import {defineComponent, type PropType} from "vue";
 import type PilotBookRow from "@/types/PilotBookRow";
-import Icons from "../../enums/Icons";
+import Icons from "../../../enums/Icons";
 
 export default defineComponent({
   name: "PilotBookList",

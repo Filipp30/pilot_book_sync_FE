@@ -3,7 +3,7 @@ export default {
     state:{
         apiHeader: {
             headers: {
-                Authorization: 'Bearer 7|3zaxC39mTf0rh7eNjWdkpabcarv3Nk17Bj3HB1AH',
+                Authorization: 'Bearer 9|XgPBst2avFH1a2jQWkUuEfer901tESUtC8FfKqn4',
                 Accept: 'application/json'
             }
         }
@@ -14,7 +14,7 @@ export default {
     mutations:{},
 
     getters: {
-        getApiHeader(state) {
+        getApiHeader(state: any) {
             return state.apiHeader;
         }
     }

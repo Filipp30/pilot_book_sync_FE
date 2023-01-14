@@ -1,7 +1,7 @@
 <template>
 
   <div>
-    <button type="button" class="btn btn-secondary mb-5" v-on:click="this.$emit('close')">Back</button>
+    <button type="button" class="btn btn-secondary mb-5" v-on:click="close">Back</button>
   </div>
 
   <nav>
@@ -24,11 +24,12 @@
 import {defineComponent, type PropType} from "vue";
 import type PilotBookRow from "@/types/PilotBookRow";
 import Icons from "../../enums/Icons";
-import PilotBookList from "@/components/book/PilotBookList.vue";
-import PilotBookUpload from "@/components/book/PilotBookUpload.vue";
+import PilotBookList from "@/components/book/navigation/PilotBookList.vue";
+import PilotBookUpload from "@/components/book/navigation/PilotBookUpload.vue";
+
 
 export default defineComponent({
-  name: "PilotBookOverview",
+  name: "PilotBookNavigation",
   components: {PilotBookUpload, PilotBookList},
   computed: {
     Icons() {
@@ -45,8 +46,15 @@ export default defineComponent({
       required: true,
       type: String
     }
+  },
+
+  methods: {
+    close() {
+      this.$emit('close')
+    }
   }
 })
+
 </script>
 
 

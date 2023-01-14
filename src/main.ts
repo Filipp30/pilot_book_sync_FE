@@ -2,9 +2,7 @@ import { createApp } from 'vue'
 import {BootstrapVue3} from "bootstrap-vue-3"
 import App from './App.vue'
 import router from './router'
-// @ts-ignore
 import store from './store/store'
-
 
 import './assets/main.css'
 import 'bootstrap/dist/css/bootstrap.css'

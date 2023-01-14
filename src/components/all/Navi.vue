@@ -51,9 +51,9 @@ export default {
 
 <style lang="scss" scoped>
   @import url('https://fonts.googleapis.com/css2?family=New+Tegomin&display=swap');
-  @import "../assets/styles/navi";
+  @import "../../assets/styles/navi";
   .navi{
-    height: 8vh;
+    height: 10vh;
     transition: 1s;
     margin: auto;
     padding-top: 10px;
@@ -70,7 +70,7 @@ export default {
       margin-left: 20px;
 
       .logo{
-        background-image: url("../assets/images/lav_vue_logo.png");
+        background-image: url("../../assets/images/lav_vue_logo.png");
         background-repeat: no-repeat;
         background-size: contain;
         background-position: center;

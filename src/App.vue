@@ -8,7 +8,7 @@
 
 <script setup lang="ts">
 import { RouterView } from 'vue-router'
-import Navi from "@/components/Navi.vue";
+import Navi from "@/components/all/Navi.vue";
 </script>
 
 <style lang="scss" scoped>

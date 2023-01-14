@@ -10,6 +10,7 @@
     "type-check": "vue-tsc --noEmit"
   },
   "dependencies": {
+    "@vue/cli-service": "^5.0.8",
     "axios": "^1.2.2",
     "bootstrap-vue-3": "^0.4.15",
     "vue": "^3.2.45",

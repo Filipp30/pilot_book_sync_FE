@@ -8,5 +8,5 @@ export default interface PilotBookRow {
     arrivalTime: string,
     aircraftModel: string|null,
     aircraftRegistration: string|null,
-    errors: Array<Object>|null
+    errors: Array<Object>|[]
 }
